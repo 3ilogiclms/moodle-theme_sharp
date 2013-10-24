@@ -415,3 +415,4 @@ h2.headingblock {
 .minicalendar {
     border-collapse: collapse;
 	}
+	.coursebox .content .summary, .coursebox .content .coursecat {width : 100%;}
