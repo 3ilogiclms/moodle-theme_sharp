@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -13,20 +14,17 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
  * Theme version info
  *
  * @package    theme
  * @subpackage sharp
- * @copyright � 2012 - 2013 | 3i Logic (Pvt) Ltd.
+ * @copyright � 2012 - 2014 | 3i Logic (Pvt) Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 defined('MOODLE_INTERNAL') || die;
-
-$plugin->version   = 2013060702; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires  = 2010112400; // Requires this Moodle version
-$plugin->release = '2.3';
-$plugin->maturity = MATURITY_BETA;
+$plugin->version = 2014081200; // The current module version (Date: YYYYMMDDXX)
+$plugin->requires = 2010112400; // Requires this Moodle version
+$plugin->release = '2.7';
+$plugin->maturity = MATURITY_STABLE;
 $plugin->component = 'theme_sharp'; // Full name of the plugin (used for diagnostics)
