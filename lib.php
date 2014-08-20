@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -22,122 +21,80 @@
  * @copyright � 2012 - 2014 | 3i Logic (Pvt) Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-function sharp_set_linkcolor($css, $linkcolor) {
-    $tag = '[[setting:linkcolor]]';
-    $replacement = $linkcolor;
-    if (is_null($replacement)) {
-        $replacement = '#2d83d5';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function sharp_set_gradientstart($css, $gradientstart) {
-    $tag = '[[setting:gradientstart]]';
-    $replacement = $gradientstart;
-    if (is_null($replacement)) {
-        $replacement = '#30a1bf';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function sharp_set_gradientend($css, $gradientend) {
-    $tag = '[[setting:gradientend]]';
-    $replacement = $gradientend;
-    if (is_null($replacement)) {
-        $replacement = '#e2e2e2';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function sharp_set_buttonbg($css, $buttonbg) {
-    $tag = '[[setting:buttonbg]]';
-    $replacement = $buttonbg;
-    if (is_null($replacement)) {
-        $replacement = '#30a1bf';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function sharp_set_buttoncolor($css, $buttoncolor) {
-    $tag = '[[setting:buttoncolor]]';
-    $replacement = $buttoncolor;
-    if (is_null($replacement)) {
-        $replacement = '#ffffff';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function sharp_set_buttonhovercolor($css, $buttonhovercolor) {
-    $tag = '[[setting:buttonhovercolor]]';
-    $replacement = $buttonhovercolor;
-    if (is_null($replacement)) {
-        $replacement = '#000000';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function sharp_set_customcss($css, $customcss) {
-    $tag = '[[setting:customcss]]';
-    $replacement = $customcss;
-    if (is_null($replacement)) {
-        $replacement = '';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-function sharp_process_css($css, $theme) {
-    if (!empty($theme->settings->linkcolor)) {
-        $linkcolor = $theme->settings->linkcolor;
-    } else {
-        $linkcolor = null;
-    }
-    $css = sharp_set_linkcolor($css, $linkcolor);
-    if (!empty($theme->settings->gradientstart)) {
-        $gradientstart = $theme->settings->gradientstart;
-    } else {
-        $gradientstart = null;
-    }
-    $css = sharp_set_gradientstart($css, $gradientstart);
-    if (!empty($theme->settings->gradientend)) {
-        $gradientend = $theme->settings->gradientend;
-    } else {
-        $gradientend = null;
-    }
-    $css = sharp_set_gradientend($css, $gradientend);
-
-    if (!empty($theme->settings->buttonbg)) {
-        $buttonbg = $theme->settings->buttonbg;
-    } else {
-        $buttonbg = null;
-    }
-    $css = sharp_set_buttonbg($css, $buttonbg);
-
-    if (!empty($theme->settings->buttoncolor)) {
-        $buttoncolor = $theme->settings->buttoncolor;
-    } else {
-        $buttoncolor = null;
-    }
-    $css = sharp_set_buttoncolor($css, $buttoncolor);
-
-    if (!empty($theme->settings->buttonhovercolor)) {
-        $buttonhovercolor = $theme->settings->buttonhovercolor;
-    } else {
-        $buttonhovercolor = null;
-    }
-    $css = sharp_set_buttonhovercolor($css, $buttonhovercolor);
-
-    if (!empty($theme->settings->customcss)) {
-        $customcss = $theme->settings->customcss;
-    } else {
-        $customcss = null;
-    }
-    $css = sharp_set_customcss($css, $customcss);
-    return $css;
+defined('MOODLE_INTERNAL') || die;
+if ($ADMIN->fulltree) {
+    global $CFG;
+    // Logo file setting
+    $name = 'theme_sharp/logo';
+    $title = get_string('logo', 'theme_sharp');
+    $description = get_string('logodesc', 'theme_sharp');
+    $default = $CFG->wwwroot . '/theme/sharp/pix/rubix.png';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $settings->add($setting);
+    // Link color setting
+    $name = 'theme_sharp/linkcolor';
+    $title = get_string('linkcolor', 'theme_sharp');
+    $description = get_string('linkcolordesc', 'theme_sharp');
+    $default = '#2d83d5';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    // Block background gradient start color setting
+    $name = 'theme_sharp/gradientstart';
+    $title = get_string('gradientstart', 'theme_sharp');
+    $description = get_string('gradientstartdesc', 'theme_sharp');
+    $default = '#30a1bf';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    // Block background gradient end color setting
+    $name = 'theme_sharp/gradientend';
+    $title = get_string('gradientend', 'theme_sharp');
+    $description = get_string('gradientenddesc', 'theme_sharp');
+    $default = '#e2e2e2';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    // Block background gradient end color setting
+    $name = 'theme_sharp/buttonbg';
+    $title = get_string('buttonbg', 'theme_sharp');
+    $description = get_string('buttonbgdesc', 'theme_sharp');
+    $default = '#30a1bf';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    // Block background gradient end color setting
+    $name = 'theme_sharp/buttoncolor';
+    $title = get_string('buttoncolor', 'theme_sharp');
+    $description = get_string('buttoncolordesc', 'theme_sharp');
+    $default = '#ffffff';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    // Block background gradient end color setting
+    $name = 'theme_sharp/buttonhovercolor';
+    $title = get_string('buttonhovercolor', 'theme_sharp');
+    $description = get_string('buttonhovercolordesc', 'theme_sharp');
+    $default = '#000000';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    // Tag line setting
+    $name = 'theme_sharp/tagline';
+    $title = get_string('tagline', 'theme_sharp');
+    $description = get_string('taglinedesc', 'theme_sharp');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '');
+    $settings->add($setting);
+    // Foot note setting
+    $name = 'theme_sharp/footertext';
+    $title = get_string('footertext', 'theme_sharp');
+    $description = get_string('footertextdesc', 'theme_sharp');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, '');
+    $settings->add($setting);
+    // Custom CSS file
+    $name = 'theme_sharp/customcss';
+    $title = get_string('customcss', 'theme_sharp');
+    $description = get_string('customcssdesc', 'theme_sharp');
+    $setting = new admin_setting_configtextarea($name, $title, $description, '');
+    $settings->add($setting);
 }
