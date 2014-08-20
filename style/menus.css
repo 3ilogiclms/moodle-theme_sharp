@@ -1,25 +1,22 @@
 #custommenu {
-	font-size: 1.2em;
-	line-height: 1.2;
-	float: left;
-	width:60%;
+    font-size: 1.2em;
+    line-height: 1.2;
+    float: left;
+    width:60%;
 }
-
 .yui3-skin-sam .yui3-menu-content, 
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content {
-	border: none;
-	padding: 0 !important;
+    border: none;
+    padding: 0 !important;
 }
-
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content {
-	background: #fff;
-	filter:alpha(opacity=95);
-	-moz-opacity:0.95;
-	-khtml-opacity: 0.95;
-	opacity: 0.95;
+    background: #fff;
+    filter:alpha(opacity=95);
+    -moz-opacity:0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
     padding: 5px 0;
 }
-
 
 /* Horizontal menus */
 #custommenu .yui3-menu-label-active,
@@ -27,30 +24,18 @@
 #custommenu .yui3-menu .yui3-menu .yui3-menu-label-menuvisible,
 #custommenu .yui3-menuitem-active .yui3-menuitem-content,
 #custommenu .yui3-menu .yui3-menu .yui3-menuitem-active .yui3-menuitem-content {color: #fff;background-color: #3DA6C2;}
-
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-content {
-
-
 }
-
-
 .yui3-skin-sam .yui3-menu ul,
 .yui3-skin-sam .yui3-menu ul ul {
-
 }
-
 .yui3-skin-sam .yui3-menu ul.first-of-type {
 }
-
 .yui3-skin-sam .yui3-menu-horizontal ul {
 }
-
-
 .yui3-skin-sam .yui3-menu li,
 .yui3-skin-sam .yui3-menu .yui3-menu li {
-
 }
-
 .yui3-skin-sam .yui3-menu-horizontal li {
 
 }
@@ -71,49 +56,47 @@
 
 /* Menuitems and menu labels */
 .yui3-skin-sam .yui3-menu .yui3-menu {
-	padding-top: 17px;
-	background: url([[pix:theme|menu-top]]) no-repeat 20px 0;
-	filter:alpha(opacity=95);
-	-moz-opacity:0.95;
-	-khtml-opacity: 0.95;
-	opacity: 0.95;	
+    padding-top: 17px;
+    background: url([[pix:theme|menu-top]]) no-repeat 20px 0;
+    filter:alpha(opacity=95);
+    -moz-opacity:0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;	
 }
 
 .custom_menu_submenu .custom_menu_submenu {
-	
-	filter:alpha(opacity=100);
-	-moz-opacity:1 !important;
-	-khtml-opacity: 1 !important;
-	opacity: 1 !important;
+
+    filter:alpha(opacity=100);
+    -moz-opacity:1 !important;
+    -khtml-opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu {
-	padding-top: 0;
-	background: none;
+    padding-top: 0;
+    background: none;
 }
 
 .yui3-skin-sam .yui3-menuitem-content,
 .yui3-skin-sam .yui3-menu-label {
-	color: #a2a3a6;
+    color: #a2a3a6;
 }
 
 .yui3-skin-sam .yui3-menuitem-content,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-content {
-	padding-top: 3px;
-	padding-bottom: 4px;
+    padding-top: 3px;
+    padding-bottom: 4px;
 }
-
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label,
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-content {
-	border: none;
-	padding: 0 60px 0 0;
+    border: none;
+    padding:2px 10px;
 }
-
 .yui3-skin-sam .yui3-menu-label,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label {
-	padding-top: 3px;
-	padding-bottom: 4px;
+    padding-top: 3px;
+    padding-bottom: 4px;
 
 }
 
@@ -150,8 +133,8 @@
 }
 
 .yui3-skin-sam .yui3-splitbuttonnav .yui3-menu-label .yui3-menu-toggle {
-	
-	
+
+
 }
 
 
@@ -161,14 +144,14 @@
 .yui3-skin-sam .yui3-menu-label-menuvisible,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label-active,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label-menuvisible {
- color: #fff;
-background:none;
+    color: #fff;
+    background:none;
 }
 
 .yui3-skin-sam .yui3-menuitem-active .yui3-menuitem-content,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-active .yui3-menuitem-content {
-	color: #FFFFFF;
-	background:none;
+    color: #FFFFFF;
+    background:none;
 
 }
 
