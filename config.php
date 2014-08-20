@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -13,29 +14,23 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
  * Theme version info
  *
  * @package    theme
  * @subpackage sharp
- * @copyright � 2012 - 2013 | 3i Logic (Pvt) Ltd.
+ * @copyright � 2012 - 2014 | 3i Logic (Pvt) Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 $THEME->name = 'sharp';
-
 //
 // Name of the theme. Most likely the name of
 // the directory in which this file resides.
 //
-
-
 $THEME->parents = array(
     'canvas',
     'base',
 );
-
 //
 // Which existing theme(s) in the /theme/ directory
 // do you want this theme to extend. A theme can
@@ -45,44 +40,33 @@ $THEME->parents = array(
 // extend the theme you like and just add the
 // changes you want to your theme.
 //
-
-
 $THEME->sheets = array(
+    'settings',
     'core',
     'pagelayout',
     'menus',
-    'settings',
 );
-
 //
 // Name of the stylesheet(s) you've including in
 // this theme's /styles/ directory.
 //
-
 $THEME->parents_exclude_sheets = array(
-    'base'=>array(
+    'base' => array(
         'pagelayout',
     ),
-    'canvas'=>array(
+    'canvas' => array(
         'pagelayout',
     ),
 );
-
-
 $THEME->enable_dock = true;
-
 //
 // Do you want to use the new navigation dock?
 //
-
-
 $THEME->editor_sheets = array('editor');
-
 //
 // An array of stylesheets to include within the
 // body of the editor.
 //
-
 $THEME->layouts = array(
     'base' => array(
         'file' => 'general.php',
@@ -122,7 +106,7 @@ $THEME->layouts = array(
         'file' => 'general.php',
         'regions' => array('side-post'),
         'defaultregion' => 'side-post',
-        'options' => array('langmenu'=>true),
+        'options' => array('langmenu' => true),
     ),
     'mypublic' => array(
         'file' => 'general.php',
@@ -132,34 +116,34 @@ $THEME->layouts = array(
     'login' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('langmenu'=>true),
+        'options' => array('langmenu' => true),
     ),
     'popup' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true),
+        'options' => array('nofooter' => true, 'noblocks' => true, 'nonavbar' => true),
     ),
     'frametop' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true),
+        'options' => array('nofooter' => true),
     ),
     'maintenance' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => true),
     ),
     'embedded' => array(
         'theme' => 'canvas',
         'file' => 'embedded.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => true),
     ),
     // Should display the content and basic headers only.
     'print' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>false, 'noblocks'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => false, 'noblocks' => true),
     ),
     'report' => array(
         'file' => 'general.php',
@@ -167,7 +151,6 @@ $THEME->layouts = array(
         'defaultregion' => 'side-post',
     ),
 );
-
 //
 // These are all of the possible layouts in Moodle. The
 // simplest way to do this is to keep the theme and file
@@ -176,85 +159,61 @@ $THEME->layouts = array(
 // if you want to add a different layout template to a
 // specific page.
 //
-
 // $THEME->csspostprocess = 'sharp_process_css';
-
 //
 // Allows the user to provide the name of a function
 // that all CSS should be passed to before being
 // delivered.
 //
-
 // $THEME->filter_mediaplugin_colors
-
 //
 // Used to control the colours used in the small
-// media player for the filters
+// media player for the filter
 //
-
 // $THEME->javascripts
-
 //
 // An array containing the names of JavaScript files
 // located in /javascript/ to include in the theme.
 // (gets included in the head)
 //
-
 // $THEME->javascripts_footer
-
 //
 // As above but will be included in the page footer.
 //
-
-$THEME->larrow    = '&lang;';
-
+$THEME->larrow = '&lang;';
 //
 // Overrides the left arrow image used throughout
 // Moodle
 //
-
-$THEME->rarrow    = '&rang;';
-
+$THEME->rarrow = '&rang;';
 //
 // Overrides the right arrow image used throughout Moodle
 //
-
 // $THEME->layouts
-
 //
 // An array setting the layouts for the theme
 //
-
 // $THEME->parents_exclude_javascripts
-
 //
 // An array of JavaScript files NOT to inherit from
 // the themes parents
 //
-
 // $THEME->parents_exclude_sheets
-
 //
 // An array of stylesheets not to inherit from the
 // themes parents
 //
-
 // $THEME->plugins_exclude_sheets
-
 //
 // An array of plugin sheets to ignore and not
 // include.
 //
-
 // $THEME->renderfactory
-
 //
 // Sets a custom render factory to use with the
 // theme, used when working with custom renderers.
 //
-
 // $THEME->resource_mp3player_colors
-
 //
 // Controls the colours for the MP3 player
 //
