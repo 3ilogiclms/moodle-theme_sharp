@@ -1,7 +1,18 @@
 a {
-	color:[[setting:linkcolor]];
+    color:[[setting:linkcolor]];
 }
-
-
+#region-post-wrap-1, #region-post-wrap-2 {
+    background: -webkit-gradient(linear, left top, left bottom, from([[setting:gradientstart]]), to([[setting:gradientend]]));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='[[setting:gradientstart]]', endColorstr='[[setting:gradientend]]');
+    background: -moz-linear-gradient(top, [[setting:gradientstart]], [[setting:gradientend]]);
+}
+input[type="submit"], input[type="button"] {
+    background: none repeat scroll 0 0 [[setting:buttonbg]];
+    color: [[setting:buttoncolor]];
+}
+input[type="submit"]:hover, input[type="button"]:hover {
+    background: none repeat scroll 0 0 [[setting:buttonbg]];
+    color: [[setting:buttonhovercolor]];
+}
 /** Custom CSS **/
 [[setting:customcss]]
