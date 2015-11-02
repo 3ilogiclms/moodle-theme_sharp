@@ -1,18 +1,1 @@
-Sharp
-=====
-
-Moodle theme.
-
-Sharp is a two-column, fluid-width theme coded for Moodle 2.x. It makes use of custom menus that appear above the site title on every page, giving it a user friendly structure.
-It comes in a variety of colors and is designed to provide a lower contrast interface for reading while maintaining clear visibility. 
- It also includes a basic settings page allowing you to change your custom logo, link color, add a tagline above the site name on the front page, and add text to the footer.
-
-Fixes
--- Extra spaces or gap eliminate
--- Menu alignment issues
-
-Added New features & other enhancement
--- block background gradient set by front end
--- change buttons color and background by front end
--- Enhance calendar view
--- Buttons layout(color, background & broder etc.)
+Sharp=====Moodle theme.Sharp is a two-column, fluid-width theme coded for Moodle 2.x. It makes use of custom menus that appear above the site title on every page, giving it a user friendly structure.It comes in a variety of colors and is designed to provide a lower contrast interface for reading while maintaining clear visibility.It also includes a basic settings page allowing you to change your custom logo, link color, add a tagline above the site name on the front page,and add text to the footer.Fixes-- Extra spaces or gap eliminate-- Menu alignment issuesAdded New features & other enhancement-- block background gradient set by front end-- change buttons color and background by front end-- Enhance calendar view-- Buttons layout(color, background & broder etc.)Customization using custom theme settings-----------------------------------------The settings page for the Sharp theme can be located by navigating to:Administration > Site Administration > Appearance > Themes > SharpTheme documentation--------------------Further information can be found on 3i Logic website.http://3ilogic.com/plugindoc/Sharp.pdf

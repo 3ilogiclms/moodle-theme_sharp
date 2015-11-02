@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -41,6 +40,7 @@ $THEME->parents = array(
 // changes you want to your theme.
 //
 $THEME->sheets = array(
+	'bootstrap',
     'settings',
     'core',
     'pagelayout',
@@ -114,7 +114,7 @@ $THEME->layouts = array(
         'defaultregion' => 'side-post',
     ),
     'login' => array(
-        'file' => 'general.php',
+        'file' => 'login.php',
         'regions' => array(),
         'options' => array('langmenu' => true),
     ),

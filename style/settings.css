@@ -6,11 +6,11 @@ a {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='[[setting:gradientstart]]', endColorstr='[[setting:gradientend]]');
     background: -moz-linear-gradient(top, [[setting:gradientstart]], [[setting:gradientend]]);
 }
-input[type="submit"], input[type="button"] {
+input[type="submit"], input[type="button"], button {
     background: none repeat scroll 0 0 [[setting:buttonbg]];
     color: [[setting:buttoncolor]];
 }
-input[type="submit"]:hover, input[type="button"]:hover {
+input[type="submit"]:hover, input[type="button"]:hover, button:hover{
     background: none repeat scroll 0 0 [[setting:buttonbg]];
     color: [[setting:buttonhovercolor]];
 }
