@@ -35,6 +35,11 @@ if ($showsidepost) {
 } else if (!$showsidepost) {
     $bodyclasses[] = 'content-only';
 }
+if (!empty($PAGE->theme->settings->tagline)) {
+    $tagline = $PAGE->theme->settings->tagline;
+} else {
+    $tagline = "";
+}
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
@@ -60,48 +65,62 @@ echo $OUTPUT->doctype()
                     <div id="page-wrap2">
                         <div id="wrapper" class="clearfix">
                             <!-- START OF HEADER -->
-                            <div id="page-header" class="inside">
-                                <div id="page-header-wrapper" class="wrapper clearfix">
-                                    <?php if ($hasheading) { ?>
-                                        <div id="headermenus" class="clearfix">
-                                            <div class="headermenu">
-                                                <?php
-                                                if (!empty($PAGE->layout_options['langmenu'])) {
-                                                    echo $OUTPUT->lang_menu();
-                                                }
-                                                echo $OUTPUT->login_info();
-                                                echo $PAGE->headingmenu
-                                                ?>
-                                            </div>
-                                            <?php if ($hascustommenu) { ?>
-                                                <div id="custommenu"><?php echo $custommenu; ?></div>
-                                            <?php } else { ?>
-                                                <div id="custommenu" style="line-height:1em;">&nbsp;</div> <!-- temporary until I find a better fix -->
-                                            <?php } ?>
-                                        </div>
-                                    <?php } ?>
+                               <header id="page-header">
+                    <div class="container">
+                        <div id="page-header-wrapper" class="wrapper clearfix">
+                            <div id="headermenus" class="clearfix">
+                                <div class="col-md-6 col-sm-6">
+                                    <?php if ($hascustommenu) { ?>
+                                    <div id="custommenu"><?php echo $custommenu; ?></div>
+                                    <?php } else {
+                                        ?>
+                                    <div id="custommenu" style="line-height:1em;">&nbsp;</div>
+                                    <!-- temporary until I find a better fix -->
+                                    <?php }
+                                    ?>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="headermenu clearfix">
+                                        <?php
+                                        echo $OUTPUT->lang_menu();
+                                        echo $OUTPUT->login_info();
+                                        echo $PAGE->headingmenu;
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="clearfix">&nbsp;</div>
                             <!-- END OF HEADER -->
                         <?php }
                         ?>
                         <!-- START OF CONTENT -->
                         <div id="page-content-wrapper" class="wrapper clearfix">
-                            <div id="page-content">
+                            <div id="page-content" class="container">
                                 <div id="region-main-box">
                                     <div id="region-post-box">
-                                        <div id="region-main-wrap">
+                                    <div id="region-main-wrap" class="col-md-9 zero-padding">
+                                       
                                             <div id="region-main">
                                                 <div class="region-content">
                                                     <div id="region-header" class="inside">
                                                         <?php
                                                         if ($haslogo) {
-                                                            echo html_writer::link(new moodle_url('/'), "<h1 class='headermain'><img src='" . $PAGE->theme->settings->logo . "' alt='logo' width='320px' height='100px'/></h1>");
-                                                        } else {
-                                                            ?>
-                                                            <div id="heading"><?php echo $PAGE->heading ?>
-                                                                <p class="tagline"><?php echo $tagline ?></p></div>
-                                                        <?php }
+                                    //echo html_writer::link(new moodle_url('/'), "<img src='" . (!empty($PAGE->theme->setting_file_url('logo', 'logo'))) . "' alt='logo' />");
+									?>
+									<a href="<?php echo $CFG->wwwroot; ?>">
+							<img alt="Logo" src="<?php echo $PAGE->theme->setting_file_url('logo', 'logo') ?>">
+						</a>
+									<?php
+                                } else {
+                                    ?>
+                                    <a href="<?php echo $CFG->wwwroot; ?>">
+							<img src="<?php echo $OUTPUT->pix_url('logo', 'theme'); ?>" alt="Logo" />
+						</a>
+                                    <?php
+                                }
                                                         ?>
                                                     </div>
                                                     <?php if ($hasnavbar) { ?>
@@ -121,7 +140,7 @@ echo $OUTPUT->doctype()
                                             </div>
                                         </div>
                                         <?php if ($hassidepost) { ?>
-                                            <div id="region-post" class="block-region">
+                                             <div id="region-post" class="col-md-3 zero-padding">
                                                 <div id="region-post-wrap-1">
                                                     <div id="region-post-wrap-2">
                                                         <div class="region-content">
@@ -131,6 +150,7 @@ echo $OUTPUT->doctype()
                                                 </div>
                                             </div>
                                         <?php } ?>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
