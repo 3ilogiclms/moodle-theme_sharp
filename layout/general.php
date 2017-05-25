@@ -83,7 +83,13 @@ echo $OUTPUT->doctype()
                                     <div class="headermenu clearfix">
                                         <?php
                                         echo $OUTPUT->lang_menu();
-                                        echo $OUTPUT->login_info();
+                                        if (method_exists($OUTPUT, 'user_menu')) {
+                                            echo $OUTPUT->user_menu(); // user menu, for Moodle 2.8+
+                                            echo $OUTPUT->navbar_plugin_output(); // Moodle 3.2+
+                                            echo $OUTPUT->search_box();
+                                        } else {
+                                            echo $OUTPUT->login_info(); // login_info, Moodle 2.7 and before
+                                        }
                                         echo $PAGE->headingmenu;
                                         ?>
                                     </div>
@@ -101,14 +107,13 @@ echo $OUTPUT->doctype()
                             <div id="page-content" class="container">
                                 <div id="region-main-box">
                                     <div id="region-post-box">
-                                    <div id="region-main-wrap" class="col-md-9 zero-padding">
+                                    <div id="region-main-wrap" class="col-md-9">
                                        
                                             <div id="region-main">
                                                 <div class="region-content">
                                                     <div id="region-header" class="inside">
                                                         <?php
                                                         if ($haslogo) {
-                                    //echo html_writer::link(new moodle_url('/'), "<img src='" . (!empty($PAGE->theme->setting_file_url('logo', 'logo'))) . "' alt='logo' />");
 									?>
 									<a href="<?php echo $CFG->wwwroot; ?>">
 							<img alt="Logo" src="<?php echo $PAGE->theme->setting_file_url('logo', 'logo') ?>">

@@ -18,7 +18,7 @@
  *
  * @package    theme
  * @subpackage sharp
- * @copyright � 2012 - 2014 | 3i Logic (Pvt) Ltd.
+ * @copyright (c) 2012 - 2017 | 3i Logic (Pvt) Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $THEME->name = 'sharp';
@@ -27,8 +27,7 @@ $THEME->name = 'sharp';
 // the directory in which this file resides.
 //
 $THEME->parents = array(
-    'canvas',
-    'base',
+    'clean', 'bootstrapbase'
 );
 //
 // Which existing theme(s) in the /theme/ directory
@@ -40,6 +39,7 @@ $THEME->parents = array(
 // changes you want to your theme.
 //
 $THEME->sheets = array(
+
 	'bootstrap',
     'settings',
     'core',
